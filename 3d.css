@@ -1,0 +1,88 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: linear-gradient(90deg, rgba(25, 136, 247, 1) 0%, rgba(247, 25, 136, 1) 100%);
+}
+
+  
+.wrap{
+display: grid;
+    margin: 272px 90px auto;
+
+}
+.wrap .box{
+    width: 350px;
+    margin: 0 auto;
+    position: relative;
+    perspective: 1000px;
+    cursor: pointer;
+   
+}
+.wrap .box .font{
+    background:#12e2a3;
+    height:320px ;
+    width: 100%;
+    display:flex ;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.5s ease;
+    border-radius: 5px;
+    filter: drop-shadow(-3px -3px 2px rgba(255,255,255,0.3))
+    drop-shadow(5px 5px 5px rgba(0,0,0,0.2))
+    drop-shadow(15px 15px 15px rgba(0,0,0,0.2));  
+}
+.wrap .box .font .icon{
+  height: 80px;
+}
+.wrap .box .font .icon i{
+    font-size: 80px;
+}
+.wrap .box .font span{
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+.box .back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 320px;
+    width: 100%;
+    opacity:0;
+transform-style: preserve-3d;
+    backface-visibility: hidden;
+    background: #12e2a3;
+    transform: translateY(110px) rotateX(-90deg);
+    box-shadow: 0px 5px 20px 0px rgba(0, 0,250, 0.1);
+    transition: all 0.5s ease;
+    align-items: center;
+    filter: drop-shadow(-3px -3px 2px rgba(255,255,255,0.3))
+    drop-shadow(5px 5px 5px rgba(0,0,0,0.2))
+    drop-shadow(15px 15px 15px rgba(0,0,0,0.2));  
+}
+.box .back span{
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+} 
+.box .back p{
+    margin-top: 10px;
+    text-align: center;
+}
+.box:hover .back {
+    opacity: 1;
+    transform: rotatex(0deg);
+}
+.box:hover .font{
+    opacity: 0;
+    transform: translateY(-110px ) rotateX(90deg);
+}
+
